@@ -32,5 +32,5 @@ function obtenerDatosClima(data) {
                           <p>La temperartura es: ${temperatura} °C</p>
                           <p>La humedad es:  ${humedad} %</p>
                           <img src="https://openweathermap.org/img/wn/${icono}@2x.png">
-                          <p>descripcionpcion Meteorologica: ${descripcion}</p>`;
+                          <p>Descripcionpcion Meteorologica: <br>  ${descripcion}</p>`;
 }
