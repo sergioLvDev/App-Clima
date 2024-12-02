@@ -27,9 +27,15 @@ function obtenerDatosClima(data) {
   let humedad = data.main.humidity;
   let descripcion = data.weather[0].description;
   descripcion = descripcion.charAt(0).toUpperCase() + descripcion.slice(1);
-  const icono = data.weather[0].icon;
+  let icono = data.weather[0].icon;
+  let sensatura = data.main.feels_like;
   datosClima.innerHTML = `<h2>${nombre}, ${pais}</h2>
-                          <p>La temperartura es: ${temperatura} °C</p>
+                          <p>La temperartura es: ${Math.floor(
+                            temperatura
+                          )} °C</p>
+                          <p>La sensacion termica es: ${Math.floor(
+                            sensatura
+                          )} °C</p>
                           <p>La humedad es:  ${humedad} %</p>
                           <img src="https://openweathermap.org/img/wn/${icono}@2x.png">
                           <p>Descripcionpcion Meteorologica: <br>  ${descripcion}</p>`;
